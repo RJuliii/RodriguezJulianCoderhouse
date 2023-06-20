@@ -37,18 +37,22 @@ function infoCuotas() {
 function infoPlanes() {
     let respuesta = confirm("¿Desea conocer el precio de algun plan?")
     if (respuesta === true) {
-        let codigo = prompt("Ingresa el codigo de plan: ")
-        infoPrecio(codigo)
-        let respuesta = confirm("¿Quiere informacion sobre metodos de pago? ")
-        if (respuesta === true) {
-            infoCuotas()
-            if (respuesta === false) {
-                console.warn("¡Te esperamos la proxima!")
+        let codigo = parseInt(prompt("Ingresa el codigo de plan: "))
+        if (codigo === 1 || codigo === 2 || codigo === 3 || codigo === 4) {
+            infoPrecio(codigo)
+            let respuestaComprar = confirm("¿Quiere comprar el plan? 🤑")
+            if (respuestaComprar === true) {
+                infoCuotas()
+                alert("✅ Para confirmar la compra comuniquese al +54 11 23456789")
+                console.warn("¡Muchisimas gracias!")
+                if (respuesta === false) {
+                    console.warn("¡Te esperamos la proxima!")
+                }
+            } else {
+                console.warn("Lo esperamos pronto!")
             }
-            alert("✅ Para continuar la compra comuniquese al +54 11 23456789 ")
-            console.warn("¡Muchisimas gracias!")
         } else {
-            console.warn("¡Te esperamos la proxima!")
+            console.warn("¡Vuelva a intentar!")
         }
     } else {
         console.warn("👍No olvides consultarnos cuando lo necesites 👍")
