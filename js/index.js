@@ -1,7 +1,7 @@
 // Algoritmo con un condicional
 // Algoritmo con un ciclo
 // Simulador interactivo
-
+// Funciones
 
 function infoPrecio(codigo) {
     switch (parseInt(codigo)) {
@@ -39,13 +39,13 @@ function infoPlanes() {
     if (respuesta === true) {
         let codigo = prompt("Ingresa el codigo de plan: ")
         infoPrecio(codigo)
-        let respuesta = confirm("¿Quiere comprar el plan? 🤑")
+        let respuesta = confirm("¿Quiere informacion sobre metodos de pago? ")
         if (respuesta === true) {
             infoCuotas()
             if (respuesta === false) {
                 console.warn("¡Te esperamos la proxima!")
             }
-            alert("✅ Para confirmar la compra comuniquese al +54 11 23456789")
+            alert("✅ Para continuar la compra comuniquese al +54 11 23456789 ")
             console.warn("¡Muchisimas gracias!")
         } else {
             console.warn("¡Te esperamos la proxima!")
